@@ -102,7 +102,7 @@ client.on('message', async msg => {
 	if (command === `play`) {
 		const voiceChannel = msg.member.voiceChannel;
         
-        if (!voiceChannel) return msg.channel.send("انت لم تدخل روم صوتي");
+        if (!voiceChannel) return msg.channel.send("آدخل رؤم صؤتي ؤتعآل آحجي حمبي");
         
         const permissions = voiceChannel.permissionsFor(msg.client.user);
         
@@ -181,10 +181,10 @@ client.on('message', async msg => {
         
 	} else if (command === `skip`) {
 
-		if (!msg.member.voiceChannel) return msg.channel.send("يجب ان تكون في روم صوتي");
-        if (!serverQueue) return msg.channel.send("ليست هناك اغاني ليتم التخطي");
+		if (!msg.member.voiceChannel) return msg.channel.send("آدخل ب رؤم صؤتي :[ ");
+        if (!serverQueue) return msg.channel.send("مآكؤ آغآني حتى تتخطاها يآحلؤ");
 
-		serverQueue.connection.dispatcher.end('تم تخطي الاغنية');
+		serverQueue.connection.dispatcher.end('تم جحفله الاغنيه');
         return undefined;
         
 	} else if (command === `stop`) {
@@ -230,7 +230,7 @@ client.on('message', async msg => {
 		if (serverQueue && serverQueue.playing) {
 			serverQueue.playing = false;
 			serverQueue.connection.dispatcher.pause();
-			return msg.channel.send('تم الايقاف');
+			return msg.channel.send('ؤكفت الاغنيه علمؤدك ياحلؤ');
 		}
 		return msg.channel.send('في انتظار تشغيل المقطع');
 	} else if (command === "resume") {
@@ -283,7 +283,7 @@ async function handleVideo(video, msg, voiceChannel, playlist = false) {
 		serverQueue.songs.push(song);
 		console.log(serverQueue.songs);
 		if (playlist) return undefined;
-		else return msg.channel.send(`**${song.title}**, تمت اضافة المقطع الى قائمة الانتظار `);
+		else return msg.channel.send(`**${song.title}**, انت بس آصبر , هسه تشتغل آغنيتك `);
 	} 
 	return undefined;
 }
@@ -349,7 +349,7 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers '     Script By : EX Clan ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`Lplay |ربعي ؤرقه , ؤكلها تستآهل حرك `,"http://twitch.tv/Death Shop")
+client.user.setGame(`ربعي يآكمر , ترسؤ عيؤن آلليل `,"http://twitch.tv/Death Shop")
 client.user.setStatus("dnd")
 });
 
