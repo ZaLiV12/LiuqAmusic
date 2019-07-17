@@ -20,7 +20,7 @@ const gif = require("gif-search");
 
 const client = new Discord.Client({disableEveryone: true});
 
-const prefix = "C";
+const prefix = "L";
 /////////////////////////
 ////////////////////////
 
@@ -184,7 +184,7 @@ client.on('message', async msg => {
 		if (!msg.member.voiceChannel) return msg.channel.send("آدخل ب رؤم صؤتي :[ ");
         if (!serverQueue) return msg.channel.send("مآكؤ آغآني حتى تتخطاها يآحلؤ");
 
-		serverQueue.connection.dispatcher.end('تم جحفله الاغنيه');
+		serverQueue.connection.dispatcher.end('تم جحفلة الاغنيه');
         return undefined;
         
 	} else if (command === `stop`) {
@@ -349,7 +349,7 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers '     Script By : EX Clan ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`ؤآذآ بنيه كسرتت كلبك آني بيدي آختم عمرهآ , مثل كلبك مآتكسره , آني رآح آكسر ظهرهآ  `,"http://twitch.tv/Death Shop")
+client.user.setGame(` آلدؤلة `,"http://twitch.tv/Death Shop")
 client.user.setStatus("dnd")
 });
 
